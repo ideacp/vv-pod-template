@@ -36,6 +36,9 @@ TODO: Add long description of the pod here.
     '${POD_NAME}' => ['${POD_NAME}/Assets/**/*.*','${POD_NAME}/Resources/**/*.*']
   }
 
+  # 将bundle拷贝到主工程,否则bundle嵌套
+  s.resources =  ['${POD_NAME}/**/**/*.bundle']
+
   s.public_header_files = '${POD_NAME}/Classes/Public/**/*.h'
 
   # s.frameworks = 'UIKit', 'MapKit'
