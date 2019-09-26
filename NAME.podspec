@@ -21,17 +21,21 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/${USER_NAME}/${POD_NAME}'
+  s.homepage         = 'https://gitlab.vmic.xyz/${USER_NAME}/${POD_NAME}'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '${USER_NAME}' => '${USER_EMAIL}' }
-  s.source           = { :git => 'https://github.com/${USER_NAME}/${POD_NAME}.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://gitlab.vmic.xyz/ios/${POD_NAME}.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/**/*'
-  
+  s.source_files = '${POD_NAME}/Classes/**/*'
+  s.vendored_libraries = ['${POD_NAME}/Classes/**/**/*.a']
+  s.vendored_frameworks = ['${POD_NAME}/Classes/**/**/*.framework']
+  s.public_header_files = '${POD_NAME}/Classes/Public/**/*.h'
+  # s.prefix_header_contents = '#import "VVBase.h"'
+
   s.resource_bundles = {
     '${POD_NAME}' => ['${POD_NAME}/Assets/**/*.*','${POD_NAME}/Resources/**/*.*']
   }
@@ -39,7 +43,6 @@ TODO: Add long description of the pod here.
   # 将bundle拷贝到主工程,否则bundle嵌套
   s.resources =  ['${POD_NAME}/**/**/*.bundle']
 
-  s.public_header_files = '${POD_NAME}/Classes/Public/**/*.h'
 
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
