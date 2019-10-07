@@ -1,5 +1,7 @@
 use_frameworks!
 
+source "https://gitlab.vmic.xyz/ios-pod-repo/vivo-base-repo.git"
+
 platform :ios, '8.0'
 
 target '${POD_NAME}_Example' do
