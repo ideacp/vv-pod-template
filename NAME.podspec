@@ -31,17 +31,17 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = '${POD_NAME}/Classes/**/*'
-  s.vendored_libraries = ['${POD_NAME}/Classes/**/**/*.a']
-  s.vendored_frameworks = ['${POD_NAME}/Classes/**/**/*.framework']
-  s.public_header_files = '${POD_NAME}/Classes/Public/**/*.h'
+  # s.vendored_libraries = ['${POD_NAME}/Classes/**/**/*.a']
+  # s.vendored_frameworks = ['${POD_NAME}/Classes/**/**/*.framework']
+  # s.public_header_files = '${POD_NAME}/Classes/Public/**/*.h'
   # s.prefix_header_contents = '#import "VVBase.h"'
 
-  s.resource_bundles = {
-    '${POD_NAME}' => ['${POD_NAME}/Assets/**/*.*','${POD_NAME}/Resources/**/*.*']
-  }
+  # s.resource_bundles = {
+  #   '${POD_NAME}' => ['${POD_NAME}/Assets/**/*.*','${POD_NAME}/Resources/**/*.*']
+  # }
 
-  # 将bundle拷贝到主工程,否则bundle嵌套
-  s.resources =  ['${POD_NAME}/**/**/*.bundle']
+  # # 将bundle拷贝到主工程,否则bundle嵌套
+  # s.resources =  ['${POD_NAME}/**/**/*.bundle']
 
 
   # s.frameworks = 'UIKit', 'MapKit'
