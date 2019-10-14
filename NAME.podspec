@@ -45,5 +45,6 @@ TODO: Add long description of the pod here.
 
 
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.prefix_header_contents = '#import <VVBase/VVBase.h>'
+  # s.dependency 'VVBase', '~> 1.0.0'
 end
